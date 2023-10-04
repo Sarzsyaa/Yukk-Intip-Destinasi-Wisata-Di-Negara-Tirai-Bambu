@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chengdu</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <style type="text/css">
+    	:root {
+	--primary: #CCC8AA;
+	--bg: #fff;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+	color: #fff;
+	/* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.3rem 7%;
+	background-color: #CCC8AA;
+	border-bottom: solid  #191717;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.navbar .navbar-logo {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	font-style: italic;
+}
+
+.navbar .navbar-logo span {
+	color: #191717;
+}
+
+.navbar .navbar-nav a {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+	color: #191717;
+}
+
+.navbar .navbar-nav a::after {
+	content: '';
+	display: block;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.1rem solid #191717;
+	transform: scaleX(0);
+	transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+	transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+	color: #fff;
+	margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+	color: #191717;
+}
+
+#hamburger-menu {
+	display: none;
+}
+
+marquee {
+	margin-top: 70px;
+	color: wite;
+	background-color:  #191717;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+/* Hero Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+p {
+	 color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+img {
+	width: 700px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+/* Styling main content */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.tempat {
+	margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tempat h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ .tempat p {
+ 	text-align: justify;
+ }
+
+.tempat ol {
+	 font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:  #191717;
+}
+
+.tempat img {
+   width: 300px;
+	margin-top: 15px;
+	margin-left: 220px;
+	border-radius: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+	html {
+		font-size: 75%;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	html {
+		font-size: 62.5%;
+	}
+
+	#hamburger-menu {
+		display: inline-block;
+	}
+
+	.navbar .navbar-nav {
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background-color:  #CCC8AA;
+		width: 30rem;
+		height: 100vh;
+		transition: 0.3s;
+	}
+
+	.navbar .navbar-nav.active {
+		right: 0;
+	}
+
+	.navbar .navbar-nav a {
+		color: var(--bg);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+
+	.navbar .navbar-nav a::after{
+		transform-origin: 0 0;
+	}
+
+	.navbar .navbar-nav a:hover::after{
+		transform: scaleX(0.2);
+	}
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+footer {
+	padding: 15px 0;
+	background-color: #191717;
+	color: #fff;
+	text-align: center;
+}
+    </style>
+
+</head>
+<body>
+
+	<!-- Navbar start -->
+<nav class="navbar">
+	<a href="#" class="navbar-logo">Nihao<span>News</span>.Com</a>
+
+	<div class="navbar-nav">
+		<a href="#beranda">Beranda</a>
+		<a href="#berita">Berita</a>
+	</div>
+
+
+	<div class="navbar-extra">
+		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+	</div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Ticker -->
+<marquee behavior="scroll" direction="left"> 
+        <b>TERBARU!</b> CHINA Luncurkan Jalur Kereta Super Cepat Lintas Laut Pertama.
+    </marquee>
+
+<!-- News Section -->
+	<main>
+        <section class="tempat">
+            <h2>Objek Wisata Terbaik Di Chengdu</h2>
+            <br>
+            <br>
+            <ol>1. Chengdu Research Base of Giant Panda Breeding chengdu</ol>
+            <img src="img/chengdu.jpg" alt="chengdu breeding">
+            <p>Negara China memang terkenal sekali dengan satwanya yang kenal dengan Panda, dan untuk kalian yang ingin melihat bagaimana kehidupan Panda dialam liar maka Chengdu Research Base of Giant Panda Breeding adalah tempat yang pas untuk kalian kunjungi. Karena saat berada di Chengdu Research Base of Giant Panda Breeding kalian bisa melihat panda secara langsung, serta mengetahui bagaimana penangkaran Panda ini, dan uniknya kalian bisa menggendong bayi panda yang cute banget! Ohya saat berada di Chengdu Research Base of Giant Panda Breeding jangan lewatkan untuk berfoto ditengah-tengah panda yang cute ya guys! Tempat ini cocok juga untuk kamu yang lagi cari wisata edukasi bersama keluarga.</p>
+        </section>
+
+          <section class="tempat">
+            <ol>2. Jinli Ancient Street</ol>
+            <img src="img/jingli.jpeg" alt="Jingli Street">
+            <p>Jinli Ancient Street ini berada dikawasan Kota Tua yang ada di Pusat Kota. Jadi dulunya sebelum menjadi Jinli Ancient Street tempat ini sempat mati, dan tidak dihuni. Namun pemerintah yang ada di Kota Chengdu ini mempermak, dan membuat bangunan banguna disini terlihat cantik. Hal ini agar membuat wisatawan yang berakunjung ke Kota Chengdu ini mampir ke Jinli Ancient Street untuk melihat kota lama yang dihiasi lampion merah, dan beraneka ornamen indah bisa kalian nikmati saat berada di Jinli Ancient Street. Selain bisa melihat betapa menakjubkannya kota tua, disini kalian bisa mencicipi beraneka kuliner, nongkrong di cafe, atau restoran yang ada di Jinli Ancient Street. Selain kuliner yang ada di Restoran atau cafe disini juga terdapa street food yang siap memanjakan lidah kalian saat berada di Jinli Ancient Street.</p>
+        </section>
+
+        <section class="tempat">
+            <ol>3. Patung Buddha Raksasa Leshan </ol>
+            <img src="img/patung.jpeg" alt="Patung Buddha">
+            <p>Buddha Raksasa Leshan ini masuk dalam daftar Situs Warisan Dunia UNESCO ditahun 1996, dan Buddha Raksasa Leshan menjadi salah satu patung Buddha terbesar di Dunia loh! Bayangkan saja patung Buddha Raksasa Leshan ini memiliki tinggi sekitar 71 meter, dan Buddha Raksasa Leshan sudah dibangun sejak 713 Masehi lamanya. Makanya tak heran jika Patung Buddha Raksasa Leshan ini sangat besar, dan megah. Disekitar patung Buddha Raksasa Leshan ini juga terdapat pepohonan hijauu, dan ditebing patung Buddha Raksasa Leshan juga terdapat rerumputan hijau yang menjalar hal inilah yang memberikan kesan indah dari patung Buddha Raksasa Leshan. Jadi saat kalian berada di Kota Chengdu pastikan mampir ke Patung Buddha terbesar di Dunia ini ya!</p>
+        </section>
+
+        <section class="tempat">
+            <h3 style="font-style: italic;"><a href="file:///E:/SMK/Website/index.html#">Kembali</a></h3>
+        </section>
+
+
+
+	</main>
+
+<!-- feather Icons -->
+<script>
+      feather.replace();
+    </script>
+
+<!-- My Javascript -->
+<script src="js/script.js"></script>
+
+<!-- Footer -->
+	<footer>
+		<div class="container">
+		<small>Copyright &copy; 2023 - Sarzsyaa. All Rights Reserved</small>
+	    </div>
+	</footer>
+
+</body>
+</html>

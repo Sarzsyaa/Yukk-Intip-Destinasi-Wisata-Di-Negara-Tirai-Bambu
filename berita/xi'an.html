@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Xi'an</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <style type="text/css">
+    	:root {
+	--primary: #CCC8AA;
+	--bg: #fff;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+	color: #fff;
+	/* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.3rem 7%;
+	background-color: #CCC8AA;
+	border-bottom: solid  #191717;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.navbar .navbar-logo {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	font-style: italic;
+}
+
+.navbar .navbar-logo span {
+	color: #191717;
+}
+
+.navbar .navbar-nav a {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+	color: #191717;
+}
+
+.navbar .navbar-nav a::after {
+	content: '';
+	display: block;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.1rem solid #191717;
+	transform: scaleX(0);
+	transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+	transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+	color: #fff;
+	margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+	color: #191717;
+}
+
+#hamburger-menu {
+	display: none;
+}
+
+marquee {
+	margin-top: 70px;
+	color: wite;
+	background-color:  #191717;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+/* Hero Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+p {
+	 color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+img {
+	width: 700px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+/* Styling main content */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.tempat {
+	margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tempat h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ .tempat p {
+ 	text-align: justify;
+ }
+
+.tempat ol {
+	 font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:  #191717;
+}
+
+.tempat img {
+   width: 300px;
+	margin-top: 15px;
+	margin-left: 220px;
+	border-radius: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+	html {
+		font-size: 75%;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	html {
+		font-size: 62.5%;
+	}
+
+	#hamburger-menu {
+		display: inline-block;
+	}
+
+	.navbar .navbar-nav {
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background-color:  #CCC8AA;
+		width: 30rem;
+		height: 100vh;
+		transition: 0.3s;
+	}
+
+	.navbar .navbar-nav.active {
+		right: 0;
+	}
+
+	.navbar .navbar-nav a {
+		color: var(--bg);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+
+	.navbar .navbar-nav a::after{
+		transform-origin: 0 0;
+	}
+
+	.navbar .navbar-nav a:hover::after{
+		transform: scaleX(0.2);
+	}
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+footer {
+	padding: 15px 0;
+	background-color: #191717;
+	color: #fff;
+	text-align: center;
+}
+    </style>
+
+</head>
+<body>
+
+	<!-- Navbar start -->
+<nav class="navbar">
+	<a href="#" class="navbar-logo">Nihao<span>News</span>.Com</a>
+
+	<div class="navbar-nav">
+		<a href="#beranda">Beranda</a>
+		<a href="#berita">Berita</a>
+	</div>
+
+
+	<div class="navbar-extra">
+		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+	</div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Ticker -->
+<marquee behavior="scroll" direction="left"> 
+        <b>TERBARU!</b> CHINA Luncurkan Jalur Kereta Super Cepat Lintas Laut Pertama.
+    </marquee>
+    
+<!-- News Section -->
+	<main>
+        <section class="tempat">
+            <h2>Deretan Objek Wisata Di Kota Xi'an</h2>
+            <br>
+            <br>
+            <ol>1. Terracotta Army China</ol>
+            <img src="img/terracotta.jpg" alt="Terracotta Army">
+            <p>Tempat wisata utama yang banyak menarik pengunjung ke Xi'an yaitu Terracotta Army, karena keunikan patung-patung tentara China yang memiliki wajah berbeda-beda. Situs ini berupa instalasi prajurit, kuda dan senjata perang yang terbuat dari tanah liat. Sekitar 10 ribu instalasi bisa diamati di sini. Peneliti mengatakan kalau mereka belum melakukan penggalian seluruhnya, sehingga masih ada banyak instalasi yang belum terungkap di bawah tanahnya. Instalasi ini dibuat saat zaman pemerintahan kaisar pertama Dinasti Qin, Qin Shi Huang (259-210 SM). Situs Terracotta Army telah masuk dalam daftar Situs Warisan Dunia UNESCO dan dilindungi keberadaannya. Terracotta Army dibangun oleh raja kekaisaran pertama China sebagai proyek untuk melindungi diri sepeninggalnya. Barulah di tahun 1974, kawasan ini ditemukan oleh seorang petani yang hendak menggali sumur. Kini, Terracotta Army menjadi tempat wisata popular di Xi'an.</p>
+        </section>
+
+          <section class="tempat">
+            <ol>2. Muslim Quarter Xi'an</ol>
+            <img src="img/Quarter.jpg" alt="Muslim Quarter">
+            <p>Bagi turis muslim asal Indonesia yang ingin liburan akhir tahun di China, tentu saja Xi'an bisa menjadi pilihan. Banyak sejarawan yang mengatakan bahwa Xi'an adalah titik awal Jalur Sutra, rute perdagangan kuno yang menghubungkan Tiongkok dengan Timur Tengah dan Eropa. Oleh karena itu, dari masakan hingga pakaian, kota ini sangat dipengaruhi oleh budaya Islam. Perpaduan budaya China dan Islam yang selaras di Xi'an bisa dirasakan turis dengan berkunjung ke Muslim Quarter, atau Huimin Jie dalam bahasa Mandarin, yang terletak di pusat kota tua Xi'an. Seperti Pecinan, Muslim Quarter adalah pemukiman bagi sekitar 20 ribu jiwa etnis Hui, pemeluk agama Islam di China. Padatnya warga muslim membuat kawasan seluas 1.800 meter persegi ini memiliki sepuluh masjid. Muslim Quarter juga menjadi pusat kuliner terbaik di Xi'an. Turis bisa menyusuri gang-gang sempit di sini untuk menemukan tempat makan yang menawarkan menu tradisional China-Arab yang sebagian besar halal.</p>
+        </section>
+
+        <section class="tempat">
+            <ol>3. Big Wild Goose Pagoda </ol>
+            <img src="img/Goose.jpg" alt="Big Wild">
+            <p>Big Wild Goose Pagoda adalah bangunan ikonik di Xi'an. Pagoda setinggi 64 meter ini dibangun 1.300 tahun yang lalu ketika Xi'an adalah ibu kota dari Dinasti Tang. Bagian atas pagoda menyuguhkan pemandangan megah kota tua Xi'an yang kini berpadu dengan bangunan modern di sekitarnya. Pagoda itu didedikasikan untuk Xuanzang, seorang biksu senior pada zaman Dinasti Tang, yang melakukan perjalanan ke India untuk belajar agama Buddha dan kemudian menyebarkannya kembali di Xi'an. Pengalamannya tertulis dalam novel China yang berjudul Journey to the West. Alun-alun seluas 110 ribu meter persegi di kaki pagoda menjadi lokasi publik yang selalu ramai pengunjung. Di malam musim panas, banyak warga Xi'an yang berlatih kaligrafi dengan kuas raksasa di sini. Alun-alun ini juga menyelenggarakan pertunjukan air mancur setiap setengah jam sepanjang pukul 12.30 sampai 20.30. pada hari kerja dan setiap dua jam di akhir pekan.
+            </p>
+        </section>
+
+        <section class="tempat">
+            <h3 style="font-style: italic;"><a href="file:///E:/SMK/Website/index.html#">Kembali</a></h3>
+        </section>
+
+
+
+
+	</main>
+
+<!-- feather Icons -->
+<script>
+      feather.replace();
+    </script>
+
+<!-- My Javascript -->
+<script src="js/script.js"></script>
+
+<!-- Footer -->
+	<footer>
+		<div class="container">
+		<small>Copyright &copy; 2023 - Sarzsyaa. All Rights Reserved</small>
+	    </div>
+	</footer>
+
+</body>
+</html>

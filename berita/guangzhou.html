@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guangzhou</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <style type="text/css">
+    	:root {
+	--primary: #CCC8AA;
+	--bg: #fff;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+	color: #fff;
+	/* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.3rem 7%;
+	background-color: #CCC8AA;
+	border-bottom: solid  #191717;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.navbar .navbar-logo {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	font-style: italic;
+}
+
+.navbar .navbar-logo span {
+	color: #191717;
+}
+
+.navbar .navbar-nav a {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+	color: #191717;
+}
+
+.navbar .navbar-nav a::after {
+	content: '';
+	display: block;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.1rem solid #191717;
+	transform: scaleX(0);
+	transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+	transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+	color: #fff;
+	margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+	color: #191717;
+}
+
+#hamburger-menu {
+	display: none;
+}
+
+marquee {
+	margin-top: 70px;
+	color: wite;
+	background-color:  #191717;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+/* Hero Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+p {
+	 color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+img {
+	width: 700px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+/* Styling main content */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.tempat {
+	margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tempat h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ .tempat p {
+ 	text-align: justify;
+ }
+
+.tempat ol {
+	 font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:  #191717;
+}
+
+.tempat img {
+   width: 300px;
+	margin-top: 15px;
+	margin-left: 220px;
+	border-radius: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+	html {
+		font-size: 75%;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	html {
+		font-size: 62.5%;
+	}
+
+	#hamburger-menu {
+		display: inline-block;
+	}
+
+	.navbar .navbar-nav {
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background-color:  #CCC8AA;
+		width: 30rem;
+		height: 100vh;
+		transition: 0.3s;
+	}
+
+	.navbar .navbar-nav.active {
+		right: 0;
+	}
+
+	.navbar .navbar-nav a {
+		color: var(--bg);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+
+	.navbar .navbar-nav a::after{
+		transform-origin: 0 0;
+	}
+
+	.navbar .navbar-nav a:hover::after{
+		transform: scaleX(0.2);
+	}
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+footer {
+	padding: 15px 0;
+	background-color: #191717;
+	color: #fff;
+	text-align: center;
+}
+    </style>
+
+</head>
+<body>
+
+	<!-- Navbar start -->
+<nav class="navbar">
+	<a href="#" class="navbar-logo">Nihao<span>News</span>.Com</a>
+
+	<div class="navbar-nav">
+		<a href="#beranda">Beranda</a>
+		<a href="#berita">Berita</a>
+	</div>
+
+
+	<div class="navbar-extra">
+		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+	</div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Ticker -->
+<marquee behavior="scroll" direction="left"> 
+        <b>TERBARU!</b> CHINA Luncurkan Jalur Kereta Super Cepat Lintas Laut Pertama.
+    </marquee>
+    
+<!-- News Section -->
+	<main>
+        <section class="tempat">
+            <h2>Objek Wisata Yang Wajib Di Kunjungi Di Guangzhou</h2>
+            <br>
+            <br>
+            <ol>1. Canton Tower</ol>
+            <img src="img/Canton.jpg" alt="Canton Tower">
+            <p>Tower cantik ini juga dikenal dengan Menara Guangzhou TV dan lokasinya dekat dengan Chigang Pagoda. Dibuka sejak September 2010 bertepatan saat menjadi tuan rumah untuk Asian Games 2010. Tinggi menjulang sekitar 610 meter dan memiliki desain yang begitu unik. Tempat wisata ini ketika malam hari akan berlimpah cahaya yang memberikan kesan futuristik. Pesonanya memang akan berkali kali lipat makin menawan saat malam hari. pengunjung tentu bisa naik ke atas menara dengan membayar karcis. Dari sini, anda bisa menikmati pemandangan Kota Guangzhou dari atas ketinggian.</p>
+        </section>
+
+          <section class="tempat">
+            <ol>2. Baiyun Mountain </ol>
+            <img src="img/baiyun.png" alt="Baiyun Mountain">
+            <p>Objek wisata selanjutnya adalah Gunung Awan Putih atau Baiyun Mountain. Memiliki udara yang sejuk dan pemandangan yang begitu asri, menjadikan Baiyun Mountain sebagai tujuan yang populer. Untuk sampai ke puncaknya tentu anda harus menaiki anak tangga. Tetapi semuanya akan terbayar begitu anda tiba di atas. Baiyun Mountain menawarkan pesona yang akan membuat indera penglihatan anda terkesan. Dari atas anda bisa menikmati kota Guangzhou dengan hamparan pepohonan hijau serta bunga warna warni. Beberapa spot instagramable juga hadir untuk jadi tempat mengambil foto. Anda juga bisa mencoba kereta gantung untuk perjalanan makin seru.</p>
+        </section>
+
+        <section class="tempat">
+            <ol>3. Temple Of Six Banyan Trees </ol>
+            <img src="img/temple.jpg" alt="Forbidden city">
+            <p>Ketika berlibur di wilayah Negeri Tirai Bambu memang tak boleh melewatkan kuil kuilnya. Begitu juga saat anda di Guangzhou, anda bisa menemukan Temple of Six Banyan Trees. Kuil Buddha yang juga menjadi destinasi wisata yang sudah ada sejak 537 SM atau masa Dinasti Liang. Bangunannya yang unik selalu menjadi jujugan wisatawan. Bukan hanya itu, pesona lainnya seperti Festival Lentera dan Festival Musim Semi China begitu menarik perhatian. Maka dari itu waktu paling pas untuk berkunjung adalah ketika musim semi tiba atau Bulan April. Ketika kegiatan ini dilakukan, maka ada banyak umat Buddha sekaligus wisatawan yang jauh akan meningkat.</p>
+        </section>
+
+        <section class="tempat">
+            <h3 style="font-style: italic;"><a href="file:///E:/SMK/Website/index.html#">Kembali</a></h3>
+        </section>
+
+
+
+	</main>
+
+<!-- feather Icons -->
+<script>
+      feather.replace();
+    </script>
+
+<!-- My Javascript -->
+<script src="js/script.js"></script>
+
+<!-- Footer -->
+	<footer>
+		<div class="container">
+		<small>Copyright &copy; 2023 - Sarzsyaa. All Rights Reserved</small>
+	    </div>
+	</footer>
+
+</body>
+</html>

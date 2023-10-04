@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Senzhen</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My style -->
+    <style type="text/css">
+    	:root {
+	--primary: #CCC8AA;
+	--bg: #fff;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+	color: #fff;
+	/* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.3rem 7%;
+	background-color: #CCC8AA;
+	border-bottom: solid  #191717;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.navbar .navbar-logo {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #fff;
+	font-style: italic;
+}
+
+.navbar .navbar-logo span {
+	color: #191717;
+}
+
+.navbar .navbar-nav a {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+	color: #191717;
+}
+
+.navbar .navbar-nav a::after {
+	content: '';
+	display: block;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.1rem solid #191717;
+	transform: scaleX(0);
+	transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+	transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+	color: #fff;
+	margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+	color: #191717;
+}
+
+#hamburger-menu {
+	display: none;
+}
+
+marquee {
+	margin-top: 70px;
+	color: wite;
+	background-color:  #191717;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+/* Hero Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+p {
+	 color: #191717;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+img {
+	width: 700px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+/* Styling main content */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.tempat {
+	margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.tempat h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ .tempat p {
+ 	text-align: justify;
+ }
+
+.tempat ol {
+	 font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:  #191717;
+}
+
+.tempat img {
+   width: 300px;
+	margin-top: 15px;
+	margin-left: 220px;
+	border-radius: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+	html {
+		font-size: 75%;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	html {
+		font-size: 62.5%;
+	}
+
+	#hamburger-menu {
+		display: inline-block;
+	}
+
+	.navbar .navbar-nav {
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background-color:  #CCC8AA;
+		width: 30rem;
+		height: 100vh;
+		transition: 0.3s;
+	}
+
+	.navbar .navbar-nav.active {
+		right: 0;
+	}
+
+	.navbar .navbar-nav a {
+		color: var(--bg);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+
+	.navbar .navbar-nav a::after{
+		transform-origin: 0 0;
+	}
+
+	.navbar .navbar-nav a:hover::after{
+		transform: scaleX(0.2);
+	}
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+footer {
+	padding: 15px 0;
+	background-color: #191717;
+	color: #fff;
+	text-align: center;
+}
+    </style>
+
+</head>
+<body>
+
+	<!-- Navbar start -->
+<nav class="navbar">
+	<a href="#" class="navbar-logo">Nihao<span>News</span>.Com</a>
+
+	<div class="navbar-nav">
+		<a href="#beranda">Beranda</a>
+		<a href="#berita">Berita</a>
+	</div>
+
+
+	<div class="navbar-extra">
+		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+	</div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Ticker -->
+<marquee behavior="scroll" direction="left"> 
+        <b>TERBARU!</b> CHINA Luncurkan Jalur Kereta Super Cepat Lintas Laut Pertama.
+    </marquee>
+
+<!-- News Section -->
+	<main>
+        <section class="tempat">
+            <h2>Taman & Objek Wisata Di Shenzen</h2>
+            <br>
+            <br>
+            <ol>1. Splendid China Folk Culture Village</ol>
+            <img src="img/folk.jpg" alt=" Splendid China Folk Culture Village">
+            <p>Tempat wisata di Shenzhen yang sangat populer, dan hits, di kalangan wisatawan bernama Splendid China Folk Culture Village. Sebuah taman yang memiliki jumlah pemandangan terbesar di dunia. Tetapi, Splendid China Folk Culture Village bukan hanya sekedar panorama alam saja. Di kawasan tersebut disajikan juga tema wisata budaya, dan wisata sejarah Splendid China Folk Culture Village sangat cocok bagi anda yang mencari tempat wisata di Shenzhen yang instagramable, dan romantis, dalam balutan nilai sejarah, dan budaya.</p>
+        </section>
+
+          <section class="tempat">
+            <ol>2. Shenzhen Nanao Bay</ol>
+            <img src="img/bay.jpg" alt=" Shenzhen Nanao Bay">
+            <p>Salah satu tempat wisata pantai di Shenzhen yang sangat populer bernama Shenzhen Nanao Bay, atau Nano Bay. Sebuah pantai cantik yang dikelilingi oleh area bukit-bukit hijau.Selain itu, Shenzhen Nanao Bay juga dilengkapi dengan berbagai macam fasilitas wisata, seperti speedboat, dan festival perahu naga di hari-hari tertentu. Jangan sampai terlewatkan momen romantis di Nanao Bay bersama orang tercinta. Yaitu saat matahari perlahan mulai tenggelam.</p>
+        </section>
+
+        <section class="tempat">
+            <ol>3. Wutong Mountain </ol>
+            <img src="img/mountain.jpg" alt="Wutong Mountain">
+            <p>Wisata Shenzhen, provinsi Guangdong selanjutnya bernama Wutong Mountain. Sebuah gunung tertinggi di kota Shenzhen, yang menghadirkan pesona alam yang spektakuler. Wutong Mountain juga menghadirkan cara lain untuk menikmati fenomena keindahan matahari terbenam, selain di pantai. Ada sisi keindahan yang sangat berbeda, dan biasanya menghasilkan foto siluet yang sangat kece. Selain itu, Wutong Mountain sering juga dijadikan spot untuk berolahraga oleh masyarakat sekitar. Wutong Mountain sangat cocok dijadikan destinasi wisata alam Shenzhen untuk keluarga.
+            </p>
+        </section>
+
+        <section class="tempat">
+            <h3 style="font-style: italic;"><a href="file:///E:/SMK/Website/index.html#">Kembali</a></h3>
+        </section>
+
+
+
+
+	</main>
+
+<!-- feather Icons -->
+<script>
+      feather.replace();
+    </script>
+
+<!-- My Javascript -->
+<script src="js/script.js"></script>
+
+<!-- Footer -->
+	<footer>
+		<div class="container">
+		<small>Copyright &copy; 2023 - Sarzsyaa. All Rights Reserved</small>
+	    </div>
+	</footer>
+
+</body>
+</html>
